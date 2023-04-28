@@ -18,7 +18,7 @@ def conservation_chatbot(msg):
     plant_keywords = ["plants", "garden", "landscaping", "irrigation"]
     shower_keywords = ["shower", "bath", "faucet"]
     remaining_water_keywords = ["remaining water", "water left", "how much water is left", "water level"]
-      percent_keywords = ["percentage"]
+    percent_keywords = ["percentage"]
 
     # Check for relevant keywords in message and respond accordingly
     if any(word in msg for word in greetings):
