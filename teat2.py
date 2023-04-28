@@ -1,25 +1,40 @@
 
+!pip install streamlit
 import openai
-openai.api_key = "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"
+import streamlit as st
 
-params = {}
+# Set up OpenAI API key
+openai.api_key = "YOUR_API_KEY_HERE"
 
-params["temperature"] = 0.7
-params["max_tokens"]=256
-params["model"] = "text-davinci-003"
+# Define function to generate OpenAI response
+def generate_response(prompt):
+    response = openai.Completion.create(
+        engine="davinci",
+        prompt=prompt,
+        temperature=0.7,
+        max_tokens=100,
+        n=1,
+        stop=None,
+        frequency_penalty=0,
+        presence_penalty=0
+    )
+    return response.choices[0].text.strip()
 
-prompt = "Why is water conservation important?"
+# Define Streamlit app
+def main():
+    # Set page title and description
+    st.set_page_config(page_title="Water Conservation Chatbot", page_icon=":droplet:", layout="wide")
+    st.title("Water Conservation Chatbot")
+    st.markdown("Ask me questions about water conservation!")
 
-def llm(prompt):
+    # Create text input box for user input
+    user_input = st.text_input("You:", "")
 
-  res = openai.Completion.create(
-      engine = params["model"],
-      prompt = prompt,
-      temperature = params["temperature"],
-      max_tokens = params["max_tokens"],
-  )
+    # Generate response using OpenAI when user inputs text
+    if user_input:
+        prompt = f"User: {user_input}\nBot:"
+        response = generate_response(prompt)
+        st.text_area("Bot:", value=response, height=200)
 
-  return res.choices[0].text
-  
-  llm("Why is water conservation important? ")
-  
+if _name_ == "_main_":
+    main()
