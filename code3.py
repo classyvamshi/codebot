@@ -5,6 +5,18 @@ import random
 st.sidebar.title("Water Conservation Chatbot")
 st.sidebar.write("Enter a message to start a conversation with the chatbot")
 
+st.sidebar.title("Menu")
+options = [
+    "Displaying Text",
+    "Data Elements",
+    "Media Elements",
+    "Interactive Input Elements",
+    "Chart Elements",
+    "Progress and Status Elements",
+    "StreamlitChat",
+]
+choice = st.sidebar.radio("Select an option", options)
+
 # Define conversation logic
 def conservation_chatbot(msg):
     # Convert input message to lowercase
