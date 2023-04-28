@@ -12,10 +12,7 @@ options = [
 choice = st.sidebar.radio("Select an option", options)
 
 if choice == "Displaying Text":
-     st.header("Water usage in the world")
     
-     st.subheader("Water is essential for life and is a limited resource, with only 2.5% of the world's water being freshwater.")
-elif choice == "Data Elements":
 # Define conversation logic
 def conservation_chatbot(msg):
     # Convert input message to lowercase
