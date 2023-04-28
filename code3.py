@@ -17,6 +17,7 @@ options = [
 ]
 choice = st.sidebar.radio("Select an option", options)
 
+if choice == "Displaying Text":
 # Define conversation logic
 def conservation_chatbot(msg):
     # Convert input message to lowercase
@@ -49,6 +50,8 @@ def conservation_chatbot(msg):
         response = "I'm sorry, I'm not sure how to help with that. Please ask me about water conservation!"
 
     return response
+elif choice == "Data Elements":
+    st.header("Data Elements")
 
 # Set up conversation interface
 st.title("Water Conservation Chatbot")
