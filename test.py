@@ -1,5 +1,9 @@
+!pip install openai
 import streamlit as st
+import openai
 
+
+openai.api_key = "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"
 # Define the conversation flow
 conversation = {
     "hello": "Hello! I'm a chatbot here to help you learn about water conservation. What would you like to know?",
@@ -18,16 +22,10 @@ def chat():
     st.sidebar.title("Menu")
     st.sidebar.write("Type your message in the box below and press enter to send it.")
     message = st.sidebar.text_input("You", "")
-    if message:
-        message = message.lower()
-        if message in conversation:
-            response = conversation[message]
-            st.write("Bot:", response)
-        else:
-            st.write("Bot:", "I'm sorry, I don't understand. Could you please rephrase your question?")
-    else:
-        st.write("Bot:", "Hello! I'm a chatbot here to help you learn about water conservation. What would you like to know?")
-
-# Run the chatbot function
-if __name__ == "__main__":
-    chat()
+user_input = st.text_input("You:", key="input")
+    if user_input:
+        message(f"You: {user_input}", is_user=True)
+        random_number = random.randint(0, 100)
+        message(
+            f"Bot: Hi there! I think You Lucky Number is {random_number}", is_user=False
+        )
