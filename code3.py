@@ -1,22 +1,16 @@
 import streamlit as st
 
+
 # Set up greeting message
 st.sidebar.title("Water Conservation Chatbot")
 st.sidebar.write("Enter a message to start a conversation with the chatbot")
-st.sidebar.title("Menu")
-options = [
-    "Displaying Text",
-    "Data Elements",
-    "StreamlitChat",
-]
-choice = st.sidebar.radio("Select an option", options)
 
-if choice == "Displaying Text":
-    
 # Define conversation logic
 def conservation_chatbot(msg):
     # Convert input message to lowercase
     msg = msg.lower()
+
+   
 
     # Define conservation-related keywords
     water_keywords = ["water", "conservation", "save", "usage", "waste"]
