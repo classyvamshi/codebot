@@ -7,17 +7,12 @@ st.sidebar.write("Enter a message to start a conversation with the chatbot")
 
 st.sidebar.title("Menu")
 options = [
-    "Displaying Text",
-    "Data Elements",
-    "Media Elements",
-    "Interactive Input Elements",
-    "Chart Elements",
-    "Progress and Status Elements",
+   
     "StreamlitChat",
 ]
 choice = st.sidebar.radio("Select an option", options)
 
-if choice == "Displaying Text":
+
 # Define conversation logic
 def conservation_chatbot(msg):
     # Convert input message to lowercase
@@ -50,8 +45,7 @@ def conservation_chatbot(msg):
         response = "I'm sorry, I'm not sure how to help with that. Please ask me about water conservation!"
 
     return response
-elif choice == "Data Elements":
-    st.header("Data Elements")
+
 
 # Set up conversation interface
 st.title("Water Conservation Chatbot")
