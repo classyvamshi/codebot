@@ -34,7 +34,7 @@ def conservation_chatbot(msg):
         response = "Consider planting drought-resistant plants or installing a drip irrigation system to conserve water in your garden."
     elif any(word in msg for word in shower_keywords):
         response = "Taking shorter showers and turning off the water while you soap up can save a lot of water over time."
-        elif any(word in msg for word in percent_keywords):
+    elif any(word in msg for word in percent_keywords):
         response = "The world water percentage is 71%."
     else:
         response = "I'm sorry, I'm not sure how to help with that. Please ask me about water conservation!"
