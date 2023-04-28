@@ -3,6 +3,16 @@ import streamlit as st
 # Set up greeting message
 st.sidebar.title("Water Conservation Chatbot")
 st.sidebar.write("Enter a message to start a conversation with the chatbot")
+st.sidebar.title("Menu")
+options = [
+    "Displaying Text",
+    "Data Elements",
+    "Media Elements",
+    "Interactive Input Elements",
+    "Chart Elements",
+    "Progress and Status Elements",
+    "StreamlitChat",
+]
 
 # Define conversation logic
 def conservation_chatbot(msg):
