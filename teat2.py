@@ -1,6 +1,6 @@
 
 
-import openai
+
 import streamlit as st
 
 # Set up OpenAI API key
