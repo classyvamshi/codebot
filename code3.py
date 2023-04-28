@@ -14,24 +14,7 @@ options = [
     "StreamlitChat",
 ]
 choice = st.sidebar.radio("Select an option", options)
-if choice == "Displaying Text":
-    # Define variables for water consumption
-daily_consumption = 8  # in cups
-weekly_consumption = 56  # in cups
-monthly_consumption = 240  # in cups
 
-# Define a dictionary to store water consumption by day of the week
-weekly_data = {'Monday': 10, 'Tuesday': 8, 'Wednesday': 6, 'Thursday': 7, 'Friday': 5, 'Saturday': 10, 'Sunday': 10}
-
-# Define a list to store monthly water consumption data by day
-monthly_data = [8, 10, 12, 9, 6, 8, 11, 10, 8, 10, 12, 9, 6, 8, 11, 10, 8, 10, 12, 9, 6, 8, 11, 10, 8, 10, 12, 9, 6, 8, 11]
-
-# Print the data
-print("Daily consumption:", daily_consumption, "cups")
-print("Weekly consumption:", weekly_consumption, "cups")
-print("Monthly consumption:", monthly_consumption, "cups")
-print("Weekly consumption data:", weekly_data)
-print("Monthly consumption data:", monthly_data)
 
 # Define conversation logic
 def conservation_chatbot(msg):
