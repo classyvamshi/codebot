@@ -1,8 +1,5 @@
-chromadb
-langchain
-unstructured
-unstructured[local-inference]
-gradio
+numpy
+pandas
 streamlit
+plotly
 streamlit-chat
-cohere
