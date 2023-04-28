@@ -18,6 +18,7 @@ def conservation_chatbot(msg):
     plant_keywords = ["plants", "garden", "landscaping", "irrigation"]
     shower_keywords = ["shower", "bath", "faucet"]
     remaining_water_keywords = ["remaining water", "water left", "how much water is left", "water level"]
+      percent_keywords = ["percentage"]
 
     # Check for relevant keywords in message and respond accordingly
     if any(word in msg for word in greetings):
@@ -30,6 +31,8 @@ def conservation_chatbot(msg):
         response = "Taking shorter showers and turning off the water while you soap up can save a lot of water over time."
     elif any(word in msg for word in remaining_water_keywords):
         response = f"The current water level is {random.randint(0, 100)}%."
+    elif any(word in msg for word in percent_keywords):
+        response = "The world water percentage is 71%."
     else:
         response = "I'm sorry, I'm not sure how to help with that. Please ask me about water conservation!"
 
