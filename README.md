@@ -11,7 +11,7 @@ To use this code, you need to have an OpenAI API key and replace "YOUR_API_KEY_H
 
 ## Langchain
 
-Colab Notebook: click [here]([https://colab.research.google.com/drive/1ZrQzc1RLEH7m1v86rykdRFfHqJMqjumw?usp=sharing](https://colab.research.google.com/drive/19VAkc_HTpYUy1zO6l7dKuFGSWMSLclmG?usp=sharing#scrollTo=kTeFR-Z3RK4T))
+Colab Notebook: click [here](https://colab.research.google.com/drive/19VAkc_HTpYUy1zO6l7dKuFGSWMSLclmG?usp=sharing#scrollTo=kTeFR-Z3RK4T)
 
 ## Demo
 
