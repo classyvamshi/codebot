@@ -1,7 +1,6 @@
 # Import libraries
 import streamlit as st
-import torch
-from transformers import pipeline
+
 
 # Set page title
 st.set_page_config(page_title='Energy Consumption Chatbot', page_icon=':zap:')
